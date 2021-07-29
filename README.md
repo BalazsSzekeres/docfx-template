@@ -13,7 +13,7 @@ DocFX can produce documentation from source code including C#, F#, Visual Basic,
 # Create documentation from the standard template
 1. Create a new folder
 2. From the folder call `docfx init -q`. This command generates a docfx_project folder with the default docfx.json file under it.
-3. Use `docfx docfx_project/docfx.json` to build the site.
+3. Use `docfx docfx.json` to build the site.
 4. Use `docfx serve docfx_project/_site` or `docfx --serve` to host the site locally.
 5. 
 
