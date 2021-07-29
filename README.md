@@ -66,5 +66,19 @@ For the newly generated files the show up, the content of this file needs to be 
 - name: Project Name
   href: ../project-name/toc.yml
 ```
-     
+# How to group multiple projects
+To group multiple projects or `toc.yml` files under the same menu point, do the following:
+1. Create a new folder with a name for example `example-group` in the root folder.
+2. Create a new `toc.yml` within the folder with the content of the projects:
+```
+- name: Project 1
+  href: ../project-1/toc.yml
+- name: Project 2
+  href: ../project-2/toc.yml
+```
+3. In the root `toc.yml` add:
+```
+- name: Example Group
+  href: example-group/
+```
     
