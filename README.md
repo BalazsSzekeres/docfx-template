@@ -17,7 +17,7 @@ DocFX can produce documentation from source code including C#, F#, Visual Basic,
 4. Use `docfx serve docfx_project/_site` or `docfx --serve` to host the site locally.
 5. 
 
-# How to add code to the docfx.json
+# How to add code to the docfx.json for documentation generation
 1. First add the code, preferably as a sub-module to the src folder.
 2. Then in the `metadata` object add the following object:
 ```
@@ -44,5 +44,27 @@ DocFX can produce documentation from source code including C#, F#, Visual Basic,
 }
 ```
 
+Now, when the `docfx docfx.json` command is run, docfx is going to build the `*.yml` files required in the `project-name` folder.
+
+# How to add the generated YML files in the documentation
+The structure of the documentation is defined by the `toc.yml` located in the root folder of the documentation. In the default template this file includes:
+```
+- name: Articles
+  href: articles/
+- name: Api Documentation
+  href: api/
+  homepage: api/index.md
+```
+
+For the newly generated files the show up, the content of this file needs to be modified to the following:
+```
+- name: Articles
+  href: articles/
+- name: Api Documentation
+  href: api/
+  homepage: api/index.md
+- name: Project Name
+  href: ../project-name/toc.yml
+```
      
     
